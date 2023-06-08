@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>дерево</title>
+  <style type="text/css">
+	.canvas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 600px;
+	background-color: #33B8FF;
+	}
+	.trunk,
+	.branch {
+	background: linear-gradient(to right, #7f3333, #4d2020);
+	}
+	.trunk {
+	position: relative;
+	width: 10px;
+	height: 830px;
+	margin: 0 auto;
+	}
+	.branch {
+	position: absolute;
+	width: 7px;
+	}
+	.branch:nth-child(1) {
+	transform: rotate(40deg);
+	}
+	.branch:nth-child(2) {
+	transform: rotate(-40deg);
+	}
+	.branch:nth-child(3) {
+	transform: rotate(70deg);
+	}
+	.branch:nth-child(4) {
+	transform: rotate(-50deg);
+	}
+	.branch {
+	position: absolute;
+	width: 5px;
+	transform-origin: bottom center;
+	}
+	.branch:nth-child(1) {
+	top: 180px;
+	height: 180px;
+	}
+	.branch:nth-child(2) {
+	top: 160px;
+	height: 150px;
+	}
+	.branch:nth-child(3) {
+	top: 120px;
+	height: 70px;
+	}
+	.branch:nth-child(4) {
+	top: 90px;
+	height: 60px;
+	}
+	.leaf {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 75% 0 75% 0;
+	background: linear-gradient(to right, #F9FF33, #C8A103);
+	}
+	.leaf:nth-child(1) {
+	top: 5px;
+	}
+	.leaf:nth-child(2) {
+	top: 20px;
+	}
+	@keyframes leaf-odd-grow {
+	0% {
+	transform: scale(0);
+	   }
+	100% {
+	transform: scale(1);
+	     }
+	}
+	@keyframes leaf-even-grow {
+	0% {
+	transform: rotate(-90deg) scale(0);
+	}
+	100% {
+	transform: rotate(-90deg) scale(1);
+	}
+	}
+	.leaf:nth-child(even) {
+	left: -150%;
+	transform-origin: 50% 100%;
+	animation-name: leaf-even-grow;
+	animation-duration: 4s;
+	animation-fill-mode: both;
+	}
+	.leaf:nth-child(1) {
+	top: 2px;
+	animation-delay: 3.5s;
+	}
+	.leaf:nth-child(2) {
+	top: 30px;
+	animation-delay: 3s;
+	}
+	.leaf:nth-child(3) {
+	top: 50px;
+	animation-delay: 2.5s;
+	}
+	.land {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background-color: #03C830;
+  </style>
+ </head>
+ <body>
+ <div class="canvas">
+  <div class="tree">
+   <div class="trunk">
+    <div class="branch">
+     <div class="leaf"></div>
+     <div class="leaf"></div>
+	 <div class="leaf"></div>
+	 <div class="leaf"></div>
+    </div>
+    <div class="branch">
+     <div class="leaf"></div>
+     <div class="leaf"></div>
+    </div>
+	<div class="branch">
+     <div class="leaf"></div>
+     <div class="leaf"></div>
+    </div>
+	<div class="branch">
+     <div class="leaf"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+    <div class="land"></div>
+ </body>
+</html>

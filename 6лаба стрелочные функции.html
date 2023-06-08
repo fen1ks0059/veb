@@ -1,0 +1,40 @@
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<ul2>
+  <li>apple</li>
+  <li>banana</li>
+  <li>banana</li>
+</ul2>
+</body>
+</html>
+
+
+<script>
+const fruits = ['apples', 'oranges', 'bananas'];
+const freshFruits = fruits.map((fruit) => {
+  return `свежие ${fruit}`;
+});
+
+let sum = (a, b) => {
+    let result = a + b;
+    return result;
+}
+let result1 = sum(5,7);
+
+let razn = (a, b) => {
+    let result = a - b;
+    return result;
+}
+let result2 = razn(5,7);
+
+arr = []
+arr[0] = freshFruits;
+arr[1] = result1;
+arr[2] = result2;
+
+const html2 = arr.map((item) => `<li>${item}</li>`).join('');
+document.querySelector('ul2').innerHTML = html2;
+</script>

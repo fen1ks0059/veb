@@ -1,0 +1,44 @@
+<h1>загадка 1</h1>
+<p>2+2 = ?</p>
+  ответ: <input type="number" name="a" id="a">
+  <button onclick="z1(document.getElementById('a').value,kol)">ответить</button>
+<h1>загадка 2</h1>
+<p>3+3 = ?</p>
+  ответ: <input type="number" name="b" id="b">
+  <button onclick="z2(document.getElementById('b').value, kol)">ответить</button>
+
+
+  <script>
+   var kol = parseInt(0);
+    function z1(a,kol) {
+      var res = parseInt(a);
+	  if (res == "4")
+	  {
+	  kol = kol + 1;
+	  alert("верно");
+	  }
+	  else
+	  {
+	  alert("неверно")
+	  }
+	  alert(kol);
+    }
+	
+	function z2(b,kol) {
+      var res = parseInt(b);
+	  if (res == "6")
+	  {
+	  kol = kol + 1;
+	  alert("верно");
+	  }
+	  else
+	  {
+	  alert("неверно")
+	  }
+	  alert(kol);
+    }
+	
+	function res(kol) {
+	  alert(kol);
+	}
+  </script>
